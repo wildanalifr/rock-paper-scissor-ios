@@ -1,24 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="rock_paper_scissor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="tBx-bg-AQi">
+                                <rect key="frame" x="0.0" y="0.0" width="3000" height="2005"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Batu Gunting Kertas Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58V-m0-geH">
+                                <rect key="frame" x="43.666666666666657" y="93" width="343" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BWE-LO-b3M" userLabel="Computer View">
+                                <rect key="frame" x="95" y="179" width="240" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVa-vK-78y">
+                                        <rect key="frame" x="81.666666666666657" y="53.666666666666657" width="77" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="NS5-Ri-Ten"/>
+                                    <constraint firstItem="dVa-vK-78y" firstAttribute="centerX" secondItem="BWE-LO-b3M" secondAttribute="centerX" id="bc7-M6-meQ"/>
+                                    <constraint firstItem="dVa-vK-78y" firstAttribute="centerY" secondItem="BWE-LO-b3M" secondAttribute="centerY" id="soT-jN-23j"/>
+                                    <constraint firstAttribute="width" constant="240" id="v58-07-vty"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZpA-GX-Hc6">
+                                <rect key="frame" x="140" y="656" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="FpH-fK-Qua"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="SCL-5U-wz1"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Batu"/>
+                                <connections>
+                                    <action selector="BatuButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VwY-Oa-1Dt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="On3-YZ-t5V">
+                                <rect key="frame" x="140" y="736" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Gwf-nV-DLf"/>
+                                    <constraint firstAttribute="height" constant="50" id="WDn-BJ-B4f"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="ifS-UY-E7l"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Gunting"/>
+                                <connections>
+                                    <action selector="GuntingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OYL-kt-dUU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbO-g8-FV8">
+                                <rect key="frame" x="140" y="816" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="6Pt-3b-xbt"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="sNm-SB-Jo2"/>
+                                    <constraint firstAttribute="height" constant="50" id="yfr-4t-Qve"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Kertas"/>
+                                <connections>
+                                    <action selector="KertasButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="in4-uo-Fhf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hasil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rk7-iw-q33">
+                                <rect key="frame" x="171" y="358" width="88" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                <color key="textColor" systemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHN-rW-xjr">
+                                <rect key="frame" x="10" y="590" width="410" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                <color key="textColor" systemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BWE-LO-b3M" firstAttribute="top" secondItem="58V-m0-geH" secondAttribute="bottom" constant="50" id="1Lh-jD-gPe"/>
+                            <constraint firstItem="On3-YZ-t5V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="45J-th-LC8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LHN-rW-xjr" secondAttribute="trailing" constant="10" id="5VP-l9-NK2"/>
+                            <constraint firstItem="tBx-bg-AQi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8vk-kV-bRO"/>
+                            <constraint firstItem="tBx-bg-AQi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9bp-7k-0kz"/>
+                            <constraint firstItem="On3-YZ-t5V" firstAttribute="top" secondItem="ZpA-GX-Hc6" secondAttribute="bottom" constant="30" id="E3A-D7-Wsj"/>
+                            <constraint firstItem="ZpA-GX-Hc6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ERM-lq-rMu"/>
+                            <constraint firstItem="IbO-g8-FV8" firstAttribute="top" secondItem="On3-YZ-t5V" secondAttribute="bottom" constant="30" id="JQj-Mr-xhW"/>
+                            <constraint firstItem="ZpA-GX-Hc6" firstAttribute="top" secondItem="LHN-rW-xjr" secondAttribute="bottom" constant="30" id="L0M-Gc-Dw6"/>
+                            <constraint firstItem="Rk7-iw-q33" firstAttribute="top" secondItem="BWE-LO-b3M" secondAttribute="bottom" constant="51" id="O2c-v6-PwB"/>
+                            <constraint firstItem="58V-m0-geH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="TR8-Nx-bm3"/>
+                            <constraint firstItem="IbO-g8-FV8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U9Z-E8-Aca"/>
+                            <constraint firstItem="Rk7-iw-q33" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z38-Iy-4rt"/>
+                            <constraint firstItem="LHN-rW-xjr" firstAttribute="centerX" secondItem="ZpA-GX-Hc6" secondAttribute="centerX" id="ZK2-GX-VeS"/>
+                            <constraint firstItem="BWE-LO-b3M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jew-zb-H4M"/>
+                            <constraint firstItem="58V-m0-geH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rhk-ha-3XG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IbO-g8-FV8" secondAttribute="bottom" constant="32" id="xbe-Rt-tfc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="HasilText" destination="Rk7-iw-q33" id="MrU-W0-JNs"/>
+                        <outlet property="UserText" destination="LHN-rW-xjr" id="uPV-R6-Pf3"/>
+                        <outlet property="computerChoice" destination="dVa-vK-78y" id="zJL-yX-GwQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="19.083969465648853" y="-2.1126760563380285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg" width="3000" height="2005"/>
+        <systemColor name="lightTextColor">
+            <color white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
